@@ -39,6 +39,8 @@ The goal is not to replace Open WebUI for every use case. The goal is to provide
 - Local model execution
 - No cloud API key required for local models
 
+![ollama_mermaid_1](../images/ollama_mermaid_1.png)
+
 ### 💬 Chat
 
 - ChatGPT-style interface
