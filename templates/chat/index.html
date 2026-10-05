@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Local AI — Ollama</title>
+<link rel="stylesheet" href="/static/chat.css">
+
+<!-- GitHub-style Markdown + syntax highlighting + Mermaid -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/styles/github-dark.min.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>window.addEventListener("DOMContentLoaded",()=>{if(window.mermaid){mermaid.initialize({startOnLoad:false,securityLevel:"loose",theme:"default",flowchart:{useMaxWidth:true,htmlLabels:true}});}});</script>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><span class="brand-dot"></span><span>Local AI</span></div>
+    <button id="newChat" class="new-chat">＋ New chat</button>
+    <div class="side-label">Conversations</div>
+    <div id="history" class="history"></div>
+    <div class="sidebar-bottom">
+      <div class="status-row"><span id="statusDot" class="status-dot"></span><span id="statusText">Checking Ollama…</span></div>
+      <div class="side-model"><span>Models</span><strong id="sideModel">—</strong></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button id="mobileMenu" class="icon-btn mobile-only">☰</button>
+      <div class="title-group">
+        <div class="eyebrow">LOCAL ASSISTANT</div>
+        <div class="title">Chat</div>
+      </div>
+      <div class="top-actions">
+        <select id="modelSelect" title="Ollama model"></select>
+        <label class="think-toggle" title="Enable thinking/reasoning for supported models">
+          <input id="thinkToggle" type="checkbox">
+          <span>Think</span>
+        </label>
+        <button id="refreshModels" class="icon-btn" title="Refresh Ollama models">↻</button>
+        <button id="themeToggle" class="icon-btn" title="Toggle theme">☾</button>
+      </div>
+    </header>
+
+    <section id="chat" class="chat"></section>
+
+    <div id="welcome" class="welcome">
+      <div class="orb">✦</div>
+      <h1>What can I help you build?</h1>
+      <p>Your local Ollama models, served through Django.</p>
+      <div class="suggestions">
+        <button data-prompt="Explain BGP like I am a beginner.">Explain BGP</button>
+        <button data-prompt="Give me useful Linux commands for a network engineer.">Linux commands</button>
+        <button data-prompt="Write a Python script to test SSH connectivity.">Python script</button>
+        <button data-prompt="Create a Mermaid diagram explaining OSPF neighbor formation.">Mermaid diagram</button>
+      </div>
+    </div>
+
+    <div class="composer-wrap">
+      <div class="composer">
+        <textarea id="prompt" rows="1" placeholder="Message your local AI…"></textarea>
+        <button id="send" class="send" title="Send">↑</button>
+      </div>
+      <div class="composer-meta">
+        <span id="modelInfo">Ollama</span>
+        <span>Local • Private • No Docker</span>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="/static/chat.js"></script>
+</body>
+</html>
