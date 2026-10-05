@@ -39,7 +39,7 @@ The goal is not to replace Open WebUI for every use case. The goal is to provide
 - Local model execution
 - No cloud API key required for local models
 
-![ollama_mermaid_1](../images/ollama_mermaid_1.png)
+![ollama_mermaid_1](images/ollama_mermaid_1.png)
 
 ### 💬 Chat
 
@@ -51,6 +51,8 @@ The goal is not to replace Open WebUI for every use case. The goal is to provide
 - Copy entire response
 - Light/dark mode
 - Responsive UI
+
+![ollama_mermaid_2](images/ollama_mermaid_2.png)
 
 ### 🧠 Thinking control
 
@@ -64,6 +66,8 @@ The goal is not to replace Open WebUI for every use case. The goal is to provide
 
 > Think OFF prevents supported thinking models from intentionally producing a reasoning trace. It does **not** guarantee identical speed across models: model size, CPU/GPU acceleration, context length and token generation still affect performance.
 
+![ollama_mermaid_3](images/ollama_mermaid_3.png)
+
 ### 📝 Markdown
 
 - Markdown rendering
@@ -72,6 +76,8 @@ The goal is not to replace Open WebUI for every use case. The goal is to provide
 - Inline code
 - Fenced code blocks
 - Preserved indentation
+
+![ollama_mermaid_4](images/ollama_mermaid_4.png)
 
 ### 💻 Code
 
